@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Copy, Check, Send, Sparkles, MessageSquare, Terminal as TerminalIcon } from 'lucide-react';
+import { Mail, Copy, Check, Send, Sparkles, MessageSquare, Terminal as TerminalIcon, Phone, MessageCircle } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, TwitterIcon, InstagramIcon } from '../ui/SocialIcons';
 import confetti from 'canvas-confetti';
 import { PERSONAL_INFO } from '../../data/portfolioData';
@@ -104,6 +104,34 @@ export default function ContactSection({ onOpenTerminal }) {
                   {copied ? <Check className="w-4 h-4 text-black" /> : <Copy className="w-4 h-4 text-black" />}
                   <span>{copied ? 'Copied!' : 'Copy'}</span>
                 </button>
+              </div>
+
+              {/* Phone & WhatsApp Card */}
+              <div className="p-4 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between gap-3">
+                <div className="flex items-center gap-3 overflow-hidden">
+                  <div className="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400 shrink-0">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  <div className="truncate">
+                    <div className="text-[11px] font-mono-tech text-gray-400">PHONE & WHATSAPP</div>
+                    <div className="text-xs sm:text-sm font-mono-tech text-white truncate font-medium">
+                      {PERSONAL_INFO.phone}
+                    </div>
+                  </div>
+                </div>
+
+                <a
+                  href={PERSONAL_INFO.socials.whatsapp}
+                  target="_blank"
+                  rel="noreferrer"
+                  onMouseEnter={() => sound.playHover()}
+                  onClick={() => sound.playClick()}
+                  className="px-3.5 py-2 rounded-xl text-xs font-mono-tech bg-emerald-400 hover:bg-emerald-300 text-black font-semibold transition-all shrink-0 flex items-center gap-1.5"
+                  title="Open WhatsApp Chat"
+                >
+                  <MessageCircle className="w-4 h-4 text-black" />
+                  <span>Chat</span>
+                </a>
               </div>
 
               {/* Social Channels */}

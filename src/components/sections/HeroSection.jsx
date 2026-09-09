@@ -67,11 +67,11 @@ export default function HeroSection({ onOpenTerminal }) {
             </div>
 
             <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.05]">
-              CRAFTING <br />
+              ENGINEERING <br />
               <span className="bg-gradient-to-r from-cyan-400 via-teal-200 to-purple-400 bg-clip-text text-transparent glow-cyan">
-                SPATIAL 3D
+                INTELLIGENT
               </span> <br />
-              DIMENSIONS.
+              SYSTEMS.
             </h1>
 
             {/* Dynamic Role Rotator */}

@@ -7,13 +7,13 @@ import { sound } from '../../utils/audio';
 export default function FeaturedProjects({ onSelectProject }) {
   const [filter, setFilter] = useState('ALL');
 
-  const categories = ['ALL', '3D / WEBGL', 'AI / CLOUD', 'MEDIA ENGINE'];
+  const categories = ['ALL', 'AI & VISION', 'RAG & CLOUD', 'FULL-STACK & PLATFORMS'];
 
   const filteredProjects = PROJECTS.filter(project => {
     if (filter === 'ALL') return true;
-    if (filter === '3D / WEBGL') return project.tags.includes('Three.js') || project.tags.includes('WebGL');
-    if (filter === 'AI / CLOUD') return project.tags.includes('TypeScript') || project.tags.includes('Docker');
-    if (filter === 'MEDIA ENGINE') return project.tags.includes('WebGL2') || project.tags.includes('FFmpeg WASM');
+    if (filter === 'AI & VISION') return project.tags.some(t => ['face-api.js', 'TensorFlow.js', 'CNN', 'Sarvam AI', 'LLaMA LLM'].includes(t));
+    if (filter === 'RAG & CLOUD') return project.tags.some(t => ['RAG', 'Google Gemini API', 'Pinecone DB', 'FastAPI'].includes(t));
+    if (filter === 'FULL-STACK & PLATFORMS') return project.tags.some(t => ['PHP', 'PHP 8', 'MySQL', 'JavaScript', 'Flutter', 'SVG Graphics'].includes(t));
     return true;
   });
 
@@ -25,13 +25,13 @@ export default function FeaturedProjects({ onSelectProject }) {
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-xs font-mono-tech text-cyan-400 mb-3">
               <Layers className="w-3.5 h-3.5" />
-              <span>FLAGSHIP CREATIONS</span>
+              <span>DEVELOPED CODEBASES & ARCHITECTURES</span>
             </div>
             <h2 className="font-heading text-3xl sm:text-5xl font-black text-white tracking-tight">
               FEATURED WORKS
             </h2>
             <p className="text-gray-400 text-sm sm:text-base font-sans mt-2 max-w-xl">
-              Immersive 3D environments, real-time spatial web applications, and mission-critical cloud platforms.
+              Production AI platforms, facial biometric systems, agricultural RAG knowledge engines, and full-stack campus ecosystems.
             </p>
           </div>
 
