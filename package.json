@@ -5,9 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node -e \"const fs=require('fs'); fs.copyFileSync('dist/index.html','dist/200.html'); fs.copyFileSync('dist/index.html','dist/404.html');\"",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy:surge": "npx surge dist --domain eppetarun.surge.sh",
+    "deploy:vercel": "npx vercel",
+    "deploy:netlify": "npx netlify deploy --prod --dir=dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
