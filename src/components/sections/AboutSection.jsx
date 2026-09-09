@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { UserCheck, Sparkles, Shield, Scan, Code, Globe, Terminal, Award } from 'lucide-react';
-import { PERSONAL_INFO } from '../../data/portfolioData';
+import { UserCheck, Sparkles, Shield, Scan, Code, Globe, Award } from 'lucide-react';
 import { sound } from '../../utils/audio';
 
 export default function AboutSection() {

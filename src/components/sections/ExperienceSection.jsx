@@ -1,5 +1,4 @@
-import React from 'react';
-import { Milestone, Compass, Award } from 'lucide-react';
+import { Compass } from 'lucide-react';
 import { TIMELINE } from '../../data/portfolioData';
 import { sound } from '../../utils/audio';
 

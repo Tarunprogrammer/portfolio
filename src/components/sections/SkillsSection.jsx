@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Cpu, Code2, Sparkles, Check, Globe } from 'lucide-react';
+import { Cpu } from 'lucide-react';
 import SkillsConstellation from '../canvas/SkillsConstellation';
 import { SKILL_CATEGORIES } from '../../data/portfolioData';
 import { sound } from '../../utils/audio';

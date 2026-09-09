@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Camera, Sparkles, X, Maximize2 } from 'lucide-react';
+import { Camera, X, Maximize2 } from 'lucide-react';
 import { VISUAL_GALLERY } from '../../data/portfolioData';
 import { sound } from '../../utils/audio';
 

@@ -59,7 +59,7 @@ export default function FeaturedProjects({ onSelectProject }) {
 
         {/* Project Showcase Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {filteredProjects.map((project, idx) => (
+          {filteredProjects.map((project) => (
             <div
               key={project.id}
               onMouseEnter={() => sound.playHover()}

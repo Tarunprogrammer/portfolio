@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowUpRight, Terminal as TerminalIcon, ShieldCheck, Clock, MapPin, Sparkles, Download } from 'lucide-react';
+import { ArrowUpRight, Terminal as TerminalIcon, ShieldCheck, Clock, MapPin, Sparkles } from 'lucide-react';
 import HeroScene from '../canvas/HeroScene';
 import { PERSONAL_INFO } from '../../data/portfolioData';
 import { sound } from '../../utils/audio';
