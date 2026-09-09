@@ -24,6 +24,7 @@ export default function Navbar({ onOpenTerminal }) {
   };
 
   const navLinks = [
+    { label: 'About', href: '#about' },
     { label: 'Works', href: '#projects' },
     { label: 'Capabilities', href: '#skills' },
     { label: '3D Gallery', href: '#gallery' },

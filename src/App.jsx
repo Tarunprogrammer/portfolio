@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from './components/ui/Navbar';
 import HeroSection from './components/sections/HeroSection';
+import AboutSection from './components/sections/AboutSection';
 import FeaturedProjects from './components/sections/FeaturedProjects';
 import SkillsSection from './components/sections/SkillsSection';
 import VisualGallery from './components/sections/VisualGallery';
@@ -25,6 +26,7 @@ export default function App() {
       {/* Main Content Sections */}
       <main className="relative z-10">
         <HeroSection onOpenTerminal={() => setTerminalOpen(true)} />
+        <AboutSection />
         <FeaturedProjects onSelectProject={(p) => setSelectedProject(p)} />
         <SkillsSection />
         <VisualGallery />
