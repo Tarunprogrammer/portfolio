@@ -6,11 +6,11 @@ import { GITHUB_STATS } from '../../data/portfolioData';
 export default function GithubStatsSection() {
   const topRepos = [
     {
-      name: "carecircle--ai",
-      desc: "AI-powered blood support network for Thalassemia care, donor matching & transfusion prediction.",
-      lang: "Python",
+      name: "ecommerce-llama",
+      desc: "AI-enhanced eCommerce platform with LLaMA API integration for smart discovery & recommendation.",
+      lang: "TypeScript",
       langColor: "bg-blue-500",
-      url: "https://github.com/eppetarun/carecircle--ai"
+      url: "https://github.com/eppetarun/ecommerce-llama"
     },
     {
       name: "mypic",

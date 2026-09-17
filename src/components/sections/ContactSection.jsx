@@ -229,7 +229,7 @@ export default function ContactSection() {
                       rows={4}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Hi Tarun, we reviewed your GitHub repositories (CareCircle AI & MyPic) and would like to discuss an opportunity..."
+                      placeholder="Hi Tarun, we reviewed your GitHub repositories (MyPic & AgriPath/Orliv) and would like to discuss an opportunity..."
                       className="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors resize-none"
                     />
                   </div>

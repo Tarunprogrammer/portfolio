@@ -32,31 +32,12 @@ export const PERSONAL_INFO = {
 
 export const PROJECTS = [
   {
-    id: "carecircle-ai",
-    title: "CareCircle AI",
-    category: "AI & Machine Learning",
-    subtitle: "AI-Powered Blood Support Network for Thalassemia Care",
-    description: "An intelligent patient-centric healthcare platform engineered to streamline Thalassemia care through automated donor matchmaking, outreach orchestration, and transfusion-cycle predictive modeling.",
-    image: "/images/spatial_matrix_ui.jpg",
-    tags: ["Python", "FastAPI", "Machine Learning", "Predictive Analytics", "REST API", "TailwindCSS"],
-    year: "2026",
-    metrics: "Automated Donor Matchmaking • Transfusion Cycle Prediction • Zero Overhead",
-    features: [
-      "Machine learning predictive model forecasting recipient transfusion intervals",
-      "Automated regional donor discovery and urgent blood appeal dispatch system",
-      "Comprehensive patient health tracking and transfusion scheduling cockpit",
-      "Privacy-first donor contact masking and secure notification pipeline"
-    ],
-    githubUrl: "https://github.com/eppetarun/carecircle--ai",
-    liveUrl: "https://github.com/eppetarun/carecircle--ai"
-  },
-  {
     id: "mypic",
     title: "MyPic (FaceMatch AI)",
     category: "Computer Vision & Full-Stack",
     subtitle: "Biometric Face Recognition & Event Photo Retrieval Platform",
     description: "A self-hosted biometric photo management engine utilizing browser-side deep learning CNN models (SSD MobileNet V1, 68 Landmarks). Features real-time webcam facial scanning, 128-dimensional Euclidean vector matching, and automated batch ZIP photo retrieval for event attendees.",
-    image: "/images/facematch_banner.jpg",
+    image: "/images/mypic_dashboard.jpg",
     tags: ["PHP 8", "MySQL", "TensorFlow.js", "face-api.js", "JavaScript", "CNN"],
     year: "2025 - 2026",
     metrics: "128D Vector Embeddings • Sub-50ms Match Distance • 100% Free / Zero Cloud API Costs",
@@ -75,7 +56,7 @@ export const PROJECTS = [
     category: "AI & Machine Learning",
     subtitle: "Intelligent Agricultural Advisory & RAG Knowledge Engine",
     description: "A production-grade Retrieval-Augmented Generation (RAG) backend engineered for terrace farming and agricultural advisory. Combines FastAPI, Next.js, LangChain LCEL, Pinecone Serverless Vector Database, and Google Gemini API (gemini-2.0-flash) for verified agronomic advice.",
-    image: "/images/spatial_matrix_ui.jpg",
+    image: "/images/orliv_dashboard.jpg",
     tags: ["Python", "FastAPI", "LangChain LCEL", "Google Gemini API", "Pinecone DB", "Next.js"],
     year: "2025 - 2026",
     metrics: "768-Dim Vector Indexing • Sub-100ms Query Latency • Grounded Source Citations",
@@ -264,7 +245,7 @@ export const TIMELINE = [
     year: "2024 - PRESENT",
     role: "Open-Source Software Engineer & Systems Creator",
     company: "GitHub Community (@eppetarun)",
-    description: "Designed, built, and open-sourced 33+ repositories spanning AI healthcare platforms (CareCircle AI), biometric computer vision (MyPic), agronomic RAG systems (AgriPath/Orliv), Flutter mobile apps, and enterprise Spring Boot microservices."
+    description: "Designed, built, and open-sourced 33+ repositories spanning biometric computer vision (MyPic), agronomic RAG systems (AgriPath/Orliv), Flutter mobile apps, autonomous AI agents, and enterprise Spring Boot microservices."
   },
   {
     year: "2020 - 2022",
