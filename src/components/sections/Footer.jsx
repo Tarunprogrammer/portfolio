@@ -1,73 +1,84 @@
-import { ArrowUp, Terminal as TerminalIcon } from 'lucide-react';
+import React from 'react';
+import { ArrowUp } from 'lucide-react';
+import { GithubIcon, LinkedinIcon } from '../ui/SocialIcons';
 import { PERSONAL_INFO } from '../../data/portfolioData';
-import { sound } from '../../utils/audio';
 
-export default function Footer({ onOpenTerminal }) {
+export default function Footer() {
   const scrollToTop = () => {
-    sound.playClick();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <footer className="relative border-t border-white/10 bg-[#020206] pt-16 pb-12 overflow-hidden">
+    <footer className="border-t border-slate-800/80 bg-[#070a12] pt-12 pb-10 text-left">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center pb-12 border-b border-white/5">
-          {/* Brand Col */}
-          <div className="md:col-span-6 space-y-3">
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-400 to-purple-600 flex items-center justify-center font-heading font-black text-black text-xs">
-                ET
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-8 border-b border-slate-800/60">
+          
+          {/* Brand Info */}
+          <div>
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center font-heading font-bold text-white text-xs">
+                TE
               </div>
-              <span className="font-heading font-bold text-lg text-white tracking-wider">
-                EPPE TARUN
+              <span className="font-heading font-bold text-base text-white">
+                {PERSONAL_INFO.name}
+              </span>
+              <span className="text-xs font-mono-tech text-slate-500">
+                @{PERSONAL_INFO.handle}
               </span>
             </div>
-            <p className="text-xs text-gray-400 font-sans max-w-sm">
-              Pushing the boundaries of spatial 3D web applications, generative systems, and cinematic production for the next era of the internet.
+            <p className="text-xs text-slate-400 mt-2 max-w-md leading-relaxed">
+              Undergraduate Computer Science Engineer @ JNTU Hyderabad. Designing and deploying production web systems, AI architectures, and open-source software.
             </p>
           </div>
 
-          {/* Nav Anchors */}
-          <div className="md:col-span-4 flex flex-wrap gap-4 text-xs font-mono-tech text-gray-400">
-            <a href="#about" onClick={() => sound.playClick()} className="hover:text-cyan-400 transition-colors">About</a>
-            <a href="#projects" onClick={() => sound.playClick()} className="hover:text-cyan-400 transition-colors">Works</a>
-            <a href="#skills" onClick={() => sound.playClick()} className="hover:text-cyan-400 transition-colors">Arsenal</a>
-            <a href="#gallery" onClick={() => sound.playClick()} className="hover:text-cyan-400 transition-colors">3D Gallery</a>
-            <a href="#timeline" onClick={() => sound.playClick()} className="hover:text-cyan-400 transition-colors">Milestones</a>
-            <a href="#contact" onClick={() => sound.playClick()} className="hover:text-cyan-400 transition-colors">Contact</a>
-            {onOpenTerminal && (
-              <button 
-                onClick={() => { sound.playClick(); onOpenTerminal(); }} 
-                className="hover:text-cyan-400 transition-colors flex items-center gap-1 text-cyan-400/80"
-              >
-                <TerminalIcon className="w-3 h-3" />
-                <span>Terminal</span>
-              </button>
-            )}
+          {/* Navigation Anchors */}
+          <div className="flex flex-wrap gap-4 text-xs font-medium text-slate-400">
+            <a href="#about" className="hover:text-white transition-colors">About</a>
+            <a href="#projects" className="hover:text-white transition-colors">Projects</a>
+            <a href="#skills" className="hover:text-white transition-colors">Skills</a>
+            <a href="#experience" className="hover:text-white transition-colors">Experience</a>
+            <a href="#github-stats" className="hover:text-white transition-colors">GitHub Activity</a>
+            <a href="#contact" className="hover:text-white transition-colors">Contact</a>
           </div>
 
           {/* Back to Top */}
-          <div className="md:col-span-2 flex justify-start md:justify-end">
+          <div>
             <button
               onClick={scrollToTop}
-              onMouseEnter={() => sound.playHover()}
-              className="p-3 rounded-2xl glass-panel hover:glass-panel-glow text-gray-300 hover:text-cyan-400 transition-all border border-white/10 group"
+              className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-400 hover:text-white transition-colors"
               title="Return to top"
             >
-              <ArrowUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
+              <ArrowUp className="w-4 h-4" />
             </button>
           </div>
         </div>
 
         {/* Bottom Credits & Status */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono-tech text-gray-500">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div>
-            &copy; {new Date().getFullYear()} {PERSONAL_INFO.name}. All Rights Reserved. Built under {PERSONAL_INFO.alias}.
+            &copy; {new Date().getFullYear()} {PERSONAL_INFO.name} (@{PERSONAL_INFO.handle}). Built with React, Vite & Tailwind CSS.
           </div>
 
-          <div className="flex items-center gap-2 text-cyan-400/70">
-            <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping" />
-            <span>ALL CORE SYSTEMS OPERATIONAL (100%)</span>
+          <div className="flex items-center gap-4">
+            <a 
+              href={PERSONAL_INFO.socials.github} 
+              target="_blank" 
+              rel="noreferrer"
+              className="text-slate-400 hover:text-white transition-colors flex items-center gap-1.5"
+            >
+              <GithubIcon className="w-3.5 h-3.5" />
+              <span>github.com/{PERSONAL_INFO.handle}</span>
+            </a>
+            <span>•</span>
+            <a 
+              href={PERSONAL_INFO.socials.linkedin} 
+              target="_blank" 
+              rel="noreferrer"
+              className="text-slate-400 hover:text-white transition-colors flex items-center gap-1.5"
+            >
+              <LinkedinIcon className="w-3.5 h-3.5" />
+              <span>LinkedIn</span>
+            </a>
           </div>
         </div>
       </div>

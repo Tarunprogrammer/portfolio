@@ -1,37 +1,39 @@
 import React, { useState } from 'react';
-import { ExternalLink, ArrowRight, Eye, Layers } from 'lucide-react';
+import { ExternalLink, Eye, Layers, ArrowUpRight } from 'lucide-react';
 import { GithubIcon } from '../ui/SocialIcons';
 import { PROJECTS } from '../../data/portfolioData';
-import { sound } from '../../utils/audio';
 
 export default function FeaturedProjects({ onSelectProject }) {
   const [filter, setFilter] = useState('ALL');
 
-  const categories = ['ALL', 'AI & VISION', 'RAG & CLOUD', 'FULL-STACK & PLATFORMS'];
+  const categories = ['ALL', 'AI & MACHINE LEARNING', 'FULL-STACK WEB', 'MOBILE & CLOUD', 'ENTERPRISE SYSTEMS'];
 
   const filteredProjects = PROJECTS.filter(project => {
     if (filter === 'ALL') return true;
-    if (filter === 'AI & VISION') return project.tags.some(t => ['face-api.js', 'TensorFlow.js', 'CNN', 'Sarvam AI', 'LLaMA LLM'].includes(t));
-    if (filter === 'RAG & CLOUD') return project.tags.some(t => ['RAG', 'Google Gemini API', 'Pinecone DB', 'FastAPI'].includes(t));
-    if (filter === 'FULL-STACK & PLATFORMS') return project.tags.some(t => ['PHP', 'PHP 8', 'MySQL', 'JavaScript', 'Flutter', 'SVG Graphics'].includes(t));
+    if (filter === 'AI & MACHINE LEARNING') return project.category.includes('AI') || project.category.includes('Vision');
+    if (filter === 'FULL-STACK WEB') return project.category.includes('Full-Stack') || project.category.includes('Web');
+    if (filter === 'MOBILE & CLOUD') return project.category.includes('Mobile') || project.tags.includes('Flutter') || project.tags.includes('Firebase');
+    if (filter === 'ENTERPRISE SYSTEMS') return project.category.includes('Enterprise') || project.tags.includes('Spring Boot');
     return true;
   });
 
   return (
-    <section id="projects" className="py-24 relative">
+    <section id="projects" className="py-20 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 text-left">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-xs font-mono-tech text-cyan-400 mb-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-xs font-mono-tech text-blue-400 mb-3">
               <Layers className="w-3.5 h-3.5" />
-              <span>DEVELOPED CODEBASES & ARCHITECTURES</span>
+              <span>GITHUB CODEBASES & ARCHITECTURES</span>
             </div>
-            <h2 className="font-heading text-3xl sm:text-5xl font-black text-white tracking-tight">
-              FEATURED WORKS
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white tracking-tight">
+              Featured Projects
             </h2>
-            <p className="text-gray-400 text-sm sm:text-base font-sans mt-2 max-w-xl">
-              Production AI platforms, facial biometric systems, agricultural RAG knowledge engines, and full-stack campus ecosystems.
+            <p className="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl leading-relaxed">
+              Real-world systems with open-source repositories on GitHub, featuring live demonstrations, 
+              scalable architectures, and measurable engineering impact.
             </p>
           </div>
 
@@ -40,15 +42,11 @@ export default function FeaturedProjects({ onSelectProject }) {
             {categories.map((cat) => (
               <button
                 key={cat}
-                onClick={() => {
-                  sound.playClick();
-                  setFilter(cat);
-                }}
-                onMouseEnter={() => sound.playHover()}
-                className={`px-4 py-1.5 rounded-full text-xs font-mono-tech transition-all ${
+                onClick={() => setFilter(cat)}
+                className={`px-4 py-2 rounded-xl text-xs font-medium transition-all ${
                   filter === cat
-                    ? 'bg-cyan-400 text-black font-semibold shadow-[0_0_15px_rgba(0,240,255,0.4)]'
-                    : 'glass-panel text-gray-400 hover:text-white'
+                    ? 'bg-blue-600 text-white font-semibold shadow-md shadow-blue-600/30'
+                    : 'bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:bg-slate-800'
                 }`}
               >
                 {cat}
@@ -57,121 +55,121 @@ export default function FeaturedProjects({ onSelectProject }) {
           </div>
         </div>
 
-        {/* Project Showcase Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {filteredProjects.map((project) => (
-            <div
-              key={project.id}
-              onMouseEnter={() => sound.playHover()}
-              className="group relative glass-panel rounded-3xl overflow-hidden border border-white/10 hover:border-cyan-500/40 transition-all duration-500 hover:shadow-[0_0_40px_rgba(0,240,255,0.15)] flex flex-col"
-            >
-              {/* Media Thumbnail with Realistic Image */}
-              <div 
-                className="relative w-full aspect-[16/10] overflow-hidden cursor-pointer bg-black/50"
-                onClick={() => {
-                  sound.playClick();
-                  onSelectProject(project);
-                }}
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 text-left">
+          {filteredProjects.map((project) => {
+            const hasDistinctDemo = project.liveUrl && !project.liveUrl.includes('github.com');
+
+            return (
+              <div
+                key={project.id}
+                className="pro-card rounded-2xl overflow-hidden bg-slate-900/60 border border-slate-800 flex flex-col justify-between group"
               >
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700 filter brightness-95 group-hover:brightness-105"
-                />
-
-                {/* Dark Vignette Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#030308] via-transparent to-transparent opacity-80" />
-
-                {/* Quick Inspection Floating Pill */}
-                <div className="absolute top-4 right-4 z-10 px-3 py-1.5 rounded-full glass-panel border border-white/20 text-white text-xs font-mono-tech flex items-center gap-1.5 group-hover:bg-cyan-500 group-hover:text-black group-hover:border-transparent transition-all">
-                  <Eye className="w-3.5 h-3.5" />
-                  <span>Inspect Case</span>
-                </div>
-
-                {/* Performance Metric Pill */}
-                <div className="absolute bottom-4 left-4 z-10 px-3 py-1 rounded-md bg-black/70 backdrop-blur-md border border-white/10 text-[11px] font-mono-tech text-cyan-300">
-                  {project.metrics}
-                </div>
-              </div>
-
-              {/* Project Card Meta Content */}
-              <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
                 <div>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-xs font-mono-tech text-purple-400 font-semibold tracking-wider">
-                      {project.year} • {project.subtitle}
-                    </span>
+                  {/* Media Thumbnail */}
+                  <div 
+                    className="relative w-full aspect-[16/9] overflow-hidden cursor-pointer bg-slate-950"
+                    onClick={() => onSelectProject(project)}
+                  >
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    />
+
+                    {/* Dark gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0b0f19] via-transparent to-transparent opacity-80" />
+
+                    {/* Category pill */}
+                    <div className="absolute top-4 left-4 z-10 px-3 py-1 rounded-lg bg-slate-900/90 backdrop-blur-md border border-slate-700 text-[11px] font-mono-tech text-blue-300">
+                      {project.category}
+                    </div>
+
+                    {/* Quick Inspect Pill */}
+                    <div className="absolute top-4 right-4 z-10 px-3 py-1 rounded-lg bg-slate-900/80 backdrop-blur-md border border-slate-700 text-slate-300 text-[11px] font-mono-tech flex items-center gap-1.5 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                      <Eye className="w-3.5 h-3.5" />
+                      <span>Details</span>
+                    </div>
+
+                    {/* Metrics pill */}
+                    <div className="absolute bottom-3 left-4 right-4 z-10 text-[11px] font-mono-tech text-slate-300 truncate">
+                      ⚡ {project.metrics}
+                    </div>
                   </div>
 
-                  <h3 className="font-heading text-xl sm:text-2xl font-bold text-white group-hover:text-cyan-300 transition-colors mb-3">
-                    {project.title}
-                  </h3>
-
-                  <p className="text-sm text-gray-400 leading-relaxed mb-6 font-sans">
-                    {project.description}
-                  </p>
-                </div>
-
-                <div>
-                  {/* Tech Tags */}
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2.5 py-1 rounded-md text-[11px] font-mono-tech text-gray-300 bg-white/5 border border-white/5"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Actions Footer */}
-                  <div className="pt-4 border-t border-white/10 flex items-center justify-between">
-                    <button
-                      onClick={() => {
-                        sound.playClick();
-                        onSelectProject(project);
-                      }}
-                      className="inline-flex items-center gap-1.5 text-xs font-mono-tech text-cyan-400 hover:text-cyan-300 transition-colors font-semibold"
+                  {/* Project Content */}
+                  <div className="p-6">
+                    <h3 
+                      onClick={() => onSelectProject(project)}
+                      className="font-heading font-bold text-xl text-white hover:text-blue-400 transition-colors cursor-pointer flex items-center justify-between"
                     >
-                      <span>Deep Dive Study</span>
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </button>
+                      <span>{project.title}</span>
+                      <span className="text-xs font-mono-tech text-slate-500 font-normal">{project.year}</span>
+                    </h3>
 
-                    <div className="flex items-center gap-3">
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          sound.playClick();
-                        }}
-                        className="p-2 rounded-full glass-panel hover:text-cyan-400 text-gray-400 transition-colors"
-                        title="GitHub Repository"
-                      >
-                        <GithubIcon className="w-4 h-4" />
-                      </a>
+                    <div className="text-xs font-mono-tech text-blue-400 mt-1">
+                      {project.subtitle}
+                    </div>
+
+                    <p className="text-xs sm:text-sm text-slate-400 mt-3 leading-relaxed">
+                      {project.description}
+                    </p>
+
+                    {/* Tech Stack Badges */}
+                    <div className="flex flex-wrap gap-1.5 mt-4">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-2.5 py-0.5 rounded-md bg-slate-800/80 border border-slate-700/50 text-[11px] font-mono-tech text-slate-300"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Footer Actions */}
+                <div className="px-6 pb-6 pt-2 border-t border-slate-800/60 flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-3">
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-medium bg-slate-800 hover:bg-slate-700 text-white transition-colors"
+                      title="View GitHub Repository"
+                    >
+                      <GithubIcon className="w-3.5 h-3.5" />
+                      <span>GitHub Code</span>
+                    </a>
+
+                    {hasDistinctDemo && (
                       <a
                         href={project.liveUrl}
                         target="_blank"
                         rel="noreferrer"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          sound.playClick();
-                        }}
-                        className="p-2 rounded-full glass-panel hover:text-cyan-400 text-gray-400 transition-colors"
-                        title="Live Deployment"
+                        className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-medium bg-blue-600/20 text-blue-300 hover:bg-blue-600 hover:text-white border border-blue-500/30 transition-all"
+                        title="Open Live Deployment"
                       >
-                        <ExternalLink className="w-4 h-4" />
+                        <ExternalLink className="w-3.5 h-3.5" />
+                        <span>Live Demo</span>
                       </a>
-                    </div>
+                    )}
                   </div>
+
+                  <button
+                    onClick={() => onSelectProject(project)}
+                    className="text-xs font-medium text-slate-400 hover:text-white transition-colors flex items-center gap-1"
+                  >
+                    <span>Architecture</span>
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </button>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
+
       </div>
     </section>
   );

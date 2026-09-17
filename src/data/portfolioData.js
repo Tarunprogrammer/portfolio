@@ -1,361 +1,290 @@
-// Authentic Portfolio Data for Eppe Tarun (Tarun Media)
-// Grounded directly in verified academic records, resume, and local codebases
+// Professional Portfolio Data for Tarun Eppe (@eppetarun)
+// Sourced directly from official GitHub profile and verified engineering codebases
 
 export const PERSONAL_INFO = {
-  name: "Eppe Tarun",
-  alias: "TARUN MEDIA",
-  title: "Computer Science Engineer | Full-Stack & AI Systems Developer",
-  roles: [
-    "Full-Stack Web Architect",
-    "AI & Computer Vision Developer",
-    "RAG & LLM Systems Engineer",
-    "B.Tech CSE Student @ JNTUH",
-    "Digital Platform Specialist (Tarun Media)"
-  ],
-  bio: "B.Tech Computer Science and Engineering student at JNTUH with deep hands-on expertise building production-ready AI applications, computer vision face retrieval, vector RAG systems, educational marketplaces, and scalable full-stack web platforms.",
+  name: "Tarun Eppe",
+  handle: "eppetarun",
+  title: "Software Engineer & AI Systems Developer",
+  subheadline: "B.Tech Computer Science & Engineering Student (2023–2027) at JNTUH. Creator of 33+ open-source GitHub repositories specializing in Full-Stack Engineering, AI/RAG Architectures, and Cross-Platform Systems.",
+  bio: "I am a Computer Science and Engineering undergraduate at JNTU Hyderabad with hands-on experience designing and deploying production-grade AI systems, high-performance web applications, and scalable microservices. I focus on clean architecture, strong algorithmic fundamentals, and solving practical real-world problems.",
   location: "Hyderabad, Telangana, India",
-  availability: "OPEN FOR HIGH-IMPACT ROLES & FREELANCE PLATFORMS",
+  availability: "Available for SWE, Full-Stack & AI Roles (Internship & New Grad)",
   email: "eppetarun@gmail.com",
   phone: "+91 9121919410",
-  college: "DRK Institute of Science and Technology (JNTUH), Hyderabad",
+  college: "DRK Institute of Science and Technology (JNTU Hyderabad)",
   degree: "B.Tech in Computer Science and Engineering (2023 - 2027)",
+  avatar: "/images/github_avatar.jpg",
   socials: {
     github: "https://github.com/eppetarun",
     linkedin: "https://linkedin.com/in/eppetarun",
     whatsapp: "https://wa.me/919121919410",
-    twitter: "https://x.com",
-    instagram: "https://instagram.com"
+    email: "mailto:eppetarun@gmail.com",
+    blog: "https://enigma.page.gd",
+    twitter: "https://x.com"
   },
   stats: [
-    { label: "Real Systems Built", value: "8+" },
-    { label: "AI & ML Integrations", value: "4" },
-    { label: "Core Technologies", value: "15+" },
+    { label: "Public Repositories", value: "33+" },
+    { label: "Production Platforms", value: "8+" },
+    { label: "Languages & Frameworks", value: "18+" },
     { label: "Academic Standing", value: "JNTUH '27" }
   ]
 };
 
 export const PROJECTS = [
   {
-    id: "facematch-ai",
-    title: "FACEMATCH AI",
-    subtitle: "Biometric Face Recognition & Event Photo Retrieval System",
-    description: "A self-hosted photo management platform built with PHP, MySQL, and face-api.js / TensorFlow.js CNN models (SSD MobileNet V1, 68 Facial Landmarks, Face Recognition). Features real-time webcam face scanning with an alignment guide, 128-dimensional Euclidean vector search, automatic multi-face batch detection for organizers, and instant ZIP archive downloading.",
-    image: "/images/facematch_banner.jpg",
-    tags: ["face-api.js", "TensorFlow.js", "PHP 8", "MySQL", "CNN", "JavaScript", "REST API"],
-    year: "2025 - 2026",
-    metrics: "128D Vector Embeddings • Sub-50ms Distance • Zero Cloud API Costs",
-    features: [
-      "Live webcam facial detection scanner with interactive oval guide and selfie upload",
-      "128-dimensional facial embedding extraction and MySQL Euclidean distance search (O(n))",
-      "Batch photo uploader automatically detecting and tagging multiple faces per event picture",
-      "Instant ZIP generator allowing attendees to download all their matched photos at full resolution"
-    ],
-    liveUrl: "https://github.com/eppetarun",
-    githubUrl: "https://github.com/eppetarun"
-  },
-  {
-    id: "agripath-ai",
-    title: "AGRIPATH AI / ORLIV",
-    subtitle: "Urban Rooftop Agriculture & Agronomic RAG Knowledge Engine",
-    description: "A production-grade Retrieval-Augmented Generation (RAG) backend designed for urban terrace farming and agricultural advisory. Combines FastAPI, LangChain (LCEL), Pinecone Serverless Vector Database, and Google Gemini API (gemini-2.0-flash & text-embedding-004) to provide verified agronomic calculations, soil mix formulas, and structural load analysis.",
+    id: "carecircle-ai",
+    title: "CareCircle AI",
+    category: "AI & Machine Learning",
+    subtitle: "AI-Powered Blood Support Network for Thalassemia Care",
+    description: "An intelligent patient-centric healthcare platform engineered to streamline Thalassemia care through automated donor matchmaking, outreach orchestration, and transfusion-cycle predictive modeling.",
     image: "/images/spatial_matrix_ui.jpg",
-    tags: ["FastAPI", "Python", "Google Gemini API", "LangChain LCEL", "Pinecone DB", "RAG"],
+    tags: ["Python", "FastAPI", "Machine Learning", "Predictive Analytics", "REST API", "TailwindCSS"],
+    year: "2026",
+    metrics: "Automated Donor Matchmaking • Transfusion Cycle Prediction • Zero Overhead",
+    features: [
+      "Machine learning predictive model forecasting recipient transfusion intervals",
+      "Automated regional donor discovery and urgent blood appeal dispatch system",
+      "Comprehensive patient health tracking and transfusion scheduling cockpit",
+      "Privacy-first donor contact masking and secure notification pipeline"
+    ],
+    githubUrl: "https://github.com/eppetarun/carecircle--ai",
+    liveUrl: "https://github.com/eppetarun/carecircle--ai"
+  },
+  {
+    id: "mypic",
+    title: "MyPic (FaceMatch AI)",
+    category: "Computer Vision & Full-Stack",
+    subtitle: "Biometric Face Recognition & Event Photo Retrieval Platform",
+    description: "A self-hosted biometric photo management engine utilizing browser-side deep learning CNN models (SSD MobileNet V1, 68 Landmarks). Features real-time webcam facial scanning, 128-dimensional Euclidean vector matching, and automated batch ZIP photo retrieval for event attendees.",
+    image: "/images/facematch_banner.jpg",
+    tags: ["PHP 8", "MySQL", "TensorFlow.js", "face-api.js", "JavaScript", "CNN"],
     year: "2025 - 2026",
-    metrics: "768-Dim Embeddings • Top-k Similarity • Strict Source Grounding",
+    metrics: "128D Vector Embeddings • Sub-50ms Match Distance • 100% Free / Zero Cloud API Costs",
     features: [
-      "Automated markdown agronomy knowledge base ingestion with Recursive Character Text Splitter",
-      "Semantic vector indexing using Google Gemini text-embedding-004 into Pinecone Serverless DB",
-      "Dynamic safety algorithms checking residential slab structural live load thresholds",
-      "Verified agronomic prompt engineering with zero hallucinations and source citations"
+      "Browser-based webcam face detection with real-time biometric alignment guide",
+      "High-performance 128-dimensional facial embedding vector extraction & MySQL search",
+      "Batch organizer uploader automatically detecting and tagging multiple faces per image",
+      "Instant ZIP archive bundling allowing users to download all matched high-res photos"
     ],
-    liveUrl: "https://github.com/eppetarun",
-    githubUrl: "https://github.com/eppetarun"
+    githubUrl: "https://github.com/eppetarun/mypic",
+    liveUrl: "http://eppe.gt.tc"
   },
   {
-    id: "smart-canteen",
-    title: "SMART CANTEEN PLATFORM",
-    subtitle: "Campus Digital Food Ordering & Kitchen Telemetry System",
-    description: "An end-to-end digital food ordering system engineered for educational campuses. Features intuitive user menus, real-time cart and checkout workflows, live order tracking, administrative product catalog management, and operational analytics dashboards.",
-    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1200&auto=format&fit=crop",
-    tags: ["PHP", "MySQL", "JavaScript", "Session Cart", "Admin Analytics", "HTML5/CSS3"],
-    year: "2025",
-    metrics: "Real-Time Order Flow • Sub-Second Cart Update • Zero Missed Tokens",
+    id: "agripath-samadhan",
+    title: "AgriPath Samadhan & ORLIV",
+    category: "AI & Machine Learning",
+    subtitle: "Intelligent Agricultural Advisory & RAG Knowledge Engine",
+    description: "A production-grade Retrieval-Augmented Generation (RAG) backend engineered for terrace farming and agricultural advisory. Combines FastAPI, Next.js, LangChain LCEL, Pinecone Serverless Vector Database, and Google Gemini API (gemini-2.0-flash) for verified agronomic advice.",
+    image: "/images/spatial_matrix_ui.jpg",
+    tags: ["Python", "FastAPI", "LangChain LCEL", "Google Gemini API", "Pinecone DB", "Next.js"],
+    year: "2025 - 2026",
+    metrics: "768-Dim Vector Indexing • Sub-100ms Query Latency • Grounded Source Citations",
     features: [
-      "Streamlined checkout flow with live session persistence and automated token generation",
-      "Interactive menu with category filtering, dietary tags, and real-time inventory counts",
-      "Kitchen administration console for real-time order processing and status toggling",
-      "Analytics dashboard reporting daily sales volume, peak hours, and popular dishes"
+      "Automated markdown knowledge base ingestion with Recursive Character Text Splitter",
+      "High-dimensional vector indexing using Google Gemini text-embedding-004 in Pinecone",
+      "Dynamic structural safety checks validating terrace slab live-load constraints",
+      "Strict agronomic safety prompt engineering enforcing zero hallucinations"
     ],
-    liveUrl: "https://github.com/eppetarun",
-    githubUrl: "https://github.com/eppetarun"
+    githubUrl: "https://github.com/eppetarun/agri-path-samadhan",
+    liveUrl: "https://github.com/eppetarun/orliv"
   },
   {
-    id: "zeng-apparel",
-    title: "ZENG CUSTOM APPAREL STUDIO",
-    subtitle: "Interactive SVG T-Shirt Customizer & E-Commerce Platform",
-    description: "A modern e-commerce platform equipped with an interactive in-browser SVG customizer. Allows users to manipulate vector designs on front and back garment surfaces in real time, with Google Auth, phone OTP verification, and an automated order management system.",
-    image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1200&auto=format&fit=crop",
-    tags: ["JavaScript", "SVG Graphics", "PHP", "MySQL", "OTP Auth", "Canvas"],
-    year: "2025",
-    metrics: "Dynamic SVG Rendering • Dual-Surface Canvas • Instant OTP Auth",
-    features: [
-      "Dynamic SVG vector customizer allowing artwork placement, color selection, and scaling",
-      "Dual-view perspective toggle for designing front and back apparel surfaces",
-      "Phone OTP verification and Google Authentication for seamless customer onboarding",
-      "Complete order lifecycle pipeline with production mockups and invoice generation"
-    ],
-    liveUrl: "https://github.com/eppetarun",
-    githubUrl: "https://github.com/eppetarun"
-  },
-  {
-    id: "enigma-tuitions",
-    title: "ENIGMA HOME TUITIONS",
-    subtitle: "Two-Sided Marketplace Connecting Tutors and Students",
-    description: "A two-sided educational platform featuring role-based access control, booking workflows, and student-tutor matchmaking. Built with a clean PHP/MySQL REST API layer and accompanied by a cross-platform mobile client for managing classes, consultations, and schedules.",
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop",
-    tags: ["PHP", "MySQL", "REST API", "Flutter", "Role-Based Auth", "JavaScript"],
+    id: "enigma-app",
+    title: "Enigma Mobile Platform",
+    category: "Mobile & Cloud",
+    subtitle: "Cross-Platform Application with Reactive UI & Cloud Sync",
+    description: "A modern cross-platform application developed with Flutter and Dart, backed by a robust PHP/MySQL REST API and Firebase. Implements custom reactive state management, role-based onboarding, and real-time synchronization.",
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
+    tags: ["Flutter", "Dart", "Firebase", "PHP", "MySQL", "REST API", "Android/iOS"],
     year: "2024 - 2025",
-    metrics: "Dual-Role Architecture • RESTful Endpoints • Mobile & Web Integration",
+    metrics: "60 FPS Fluid UI • Cross-Platform iOS/Android/Web • RESTful Microservices",
     features: [
-      "Role-based authentication & credential security for both students and private tutors",
-      "Standardized JSON REST API endpoints supporting Flutter mobile and web clients",
-      "Automated subject matching, booking workflow, and parent consultation coordinator",
-      "Administrative dashboard for tutor verification, class schedules, and review management"
+      "Role-based authentication & credential hashing with token security",
+      "Interactive dashboard with custom Flutter animated widgets and reactive state",
+      "Standardized JSON REST API endpoints supporting instant data synchronization",
+      "Cloud database integration with automated backup and schedule coordination"
     ],
-    liveUrl: "https://github.com/eppetarun",
-    githubUrl: "https://github.com/eppetarun"
+    githubUrl: "https://github.com/eppetarun/enigma-app",
+    liveUrl: "http://enigma.page.gd"
   },
   {
-    id: "upsc-prep-ai",
-    title: "SMART UPSC PREP ADVISOR",
-    subtitle: "AI-Powered Civil Services Mentor & Answer Evaluator",
-    description: "An advanced educational preparation platform integrating Sarvam AI and LLaMA models for automated study mentoring, personalized timetable generation, interactive timed mock tests with instant AI analysis, and historical PYQ question archives.",
+    id: "college-result",
+    title: "College Result & Academic Intelligence",
+    category: "Full-Stack Web",
+    subtitle: "Departmental Grade Analysis & Performance Tracking Portal",
+    description: "An enterprise academic portal built for JNTUH / DRK students and faculty. Features automated result ledger parsing, departmental pass-percentage analytics, syllabus tracking, and dynamic PDF transcript generation.",
     image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1200&auto=format&fit=crop",
-    tags: ["PHP", "MySQL", "Sarvam AI", "LLaMA LLM", "AI Coach", "Analytics"],
-    year: "2025",
-    metrics: "Instant AI Evaluation • Automated Timetables • 10+ Years PYQ Archive",
+    tags: ["PHP", "MySQL", "Analytics", "HTML5", "JavaScript", "PDF Generation"],
+    year: "2024 - 2025",
+    metrics: "Sub-10ms Query Execution • Automated Grade Point Calculation • Multi-Department",
     features: [
-      "Intelligent AI study coach powered by modern Indian language and general LLM models",
-      "Interactive mock test engine with instant score breakdown and AI recommendations",
-      "Dynamic algorithm generating custom study timetables tailored to syllabus progress",
-      "Curated digital repository for previous year question papers (PYQs) and reference guides"
+      "Dynamic student marksheet lookup with instantaneous GPA calculation",
+      "Departmental grade point distribution charts and failure trend analysis",
+      "Automated PDF syllabus and transcript streaming engine",
+      "Secure role-based faculty administration panel for grade record uploads"
     ],
-    liveUrl: "https://github.com/eppetarun",
-    githubUrl: "https://github.com/eppetarun"
+    githubUrl: "https://github.com/eppetarun/college-result",
+    liveUrl: "http://drksyllabus.great-site.net"
   },
   {
-    id: "online-job-portal",
-    title: "ENTERPRISE JOB PORTAL",
-    subtitle: "Modern Recruitment & Applicant Tracking System",
-    description: "A full-scale job recruitment and placement management portal featuring candidate profile generation, resume processing, company job posting, applicant tracking, and status pipeline management.",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1200&auto=format&fit=crop",
-    tags: ["PHP", "MySQL", "CSS3 / Deep Theme", "Applicant Tracking", "Workflow"],
+    id: "pushpa-spring",
+    title: "Pushpa & Sunil Spring",
+    category: "Enterprise Systems",
+    subtitle: "Scalable Java Spring Boot Microservice REST API Architecture",
+    description: "Modular enterprise backend microservices engineered with Java, Maven, and Spring Boot. Implements clean layered architecture (Controller, Service, Repository), JPA/Hibernate object-relational mapping, and automated build pipelines.",
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop",
+    tags: ["Java", "Spring Boot", "Maven", "REST API", "Hibernate", "Microservices"],
     year: "2025",
-    metrics: "End-to-End Application Pipeline • Role-Based Dashboard • Fast Search",
+    metrics: "Layered Architecture • Automated Maven CI • Enterprise Grade",
     features: [
-      "Candidate profile creator with education, experience, and uploaded resume management",
-      "Employer cockpit for posting vacancies, specifying skill tags, and viewing applicants",
-      "Interactive application status workflow from review to interview scheduling",
-      "Custom responsive interface with custom deep-theme styling"
+      "RESTful API endpoints following strict HTTP specifications and JSON responses",
+      "Layered domain service architecture separating business rules from transport",
+      "Data persistence layer utilizing JPA/Hibernate with connection pooling",
+      "Automated dependency management and build verification via Maven"
     ],
-    liveUrl: "https://github.com/eppetarun",
-    githubUrl: "https://github.com/eppetarun"
+    githubUrl: "https://github.com/eppetarun/pushpa-spring",
+    liveUrl: "https://github.com/eppetarun/sunil-spring"
   },
   {
-    id: "techfair-voting",
-    title: "TECHFAIR DIGITAL VOTING",
-    subtitle: "Campus Innovation Exhibition & Real-Time Voting Portal",
-    description: "A specialized web application engineered for college technical symposiums and project exhibitions. Enables student innovation teams to showcase project abstracts and allows attendees to cast secure digital ballots with live administrative tabulation.",
-    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop",
-    tags: ["PHP", "MySQL", "Real-Time Polling", "Student Auth", "Admin Results"],
+    id: "my-first-agent",
+    title: "Autonomous AI Agent Workflow",
+    category: "AI & Machine Learning",
+    subtitle: "Intelligent Task Automation using Agent Development Kit (ADK)",
+    description: "An autonomous multi-step reasoning agent built with the Agent Development Kit (ADK) and modern LLM orchestration. Features dynamic tool invocation, goal-directed planning loops, and robust error recovery.",
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop",
+    tags: ["Python", "AI Agents", "ADK", "LLM Workflows", "Prompt Engineering"],
     year: "2025",
-    metrics: "One-Student-One-Vote Security • Real-Time Tabulation • Live Leaderboard",
+    metrics: "Autonomous Tool Calling • Multi-Step Planning • Context-Aware Recovery",
     features: [
-      "Student registration and secure authenticated single-vote verification system",
-      "Interactive project catalogue with technical abstracts and team credentials",
-      "Real-time administrative scoreboard aggregating voting tallies across departments",
-      "Optimized lightweight architecture with sub-10ms database response latency"
+      "Autonomous task decomposition and multi-step plan execution",
+      "Tool integration allowing external API communication and data retrieval",
+      "Robust context-aware error handling preventing infinite reasoning loops",
+      "Modular prompt template architecture allowing zero-shot agent adaptation"
     ],
-    liveUrl: "https://github.com/eppetarun",
-    githubUrl: "https://github.com/eppetarun"
+    githubUrl: "https://github.com/eppetarun/my-first-agent",
+    liveUrl: "https://github.com/eppetarun/my-first-agent"
+  },
+  {
+    id: "smart-upsc-advisor",
+    title: "Smart UPSC Advisor & Exam Coach",
+    category: "Full-Stack Web",
+    subtitle: "AI-Assisted Civil Services Strategy & LLaMA Evaluation System",
+    description: "An educational AI platform integrating open-source LLM APIs (LLaMA & Sarvam AI) for automated answer evaluation, personalized study schedule generation, and 25-year previous examination paper analysis.",
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop",
+    tags: ["PHP", "MySQL", "LLaMA API", "Sarvam AI", "Chart.js", "AI Evaluation"],
+    year: "2025",
+    metrics: "Instant Answer Evaluation • 25-Year PYQ Archive • Custom Schedule Generator",
+    features: [
+      "Automated descriptive answer evaluation with constructive critique and grading",
+      "Dynamic personalized study schedule planner adapting to student weak spots",
+      "Comprehensive 25-year digital archive of previous examination papers",
+      "Interactive mock test interface with real-time performance analytics"
+    ],
+    githubUrl: "https://github.com/eppetarun/smart-upsc-advisor",
+    liveUrl: "https://github.com/eppetarun/upsc-portal"
   }
 ];
 
 export const SKILL_CATEGORIES = [
   {
-    id: "ai-vision",
-    title: "AI, Vision & RAG Systems",
-    description: "Developing production AI architectures, facial biometric recognition, and semantic vector retrieval pipelines.",
+    id: "languages",
+    title: "Programming Languages",
+    description: "Core languages used for backend systems, algorithmic problem solving, and application logic.",
     skills: [
-      { name: "face-api.js & TensorFlow.js", level: "Expert", pct: 93 },
-      { name: "Google Gemini API & LLMs", level: "Advanced", pct: 90 },
-      { name: "FastAPI & Python", level: "Expert", pct: 95 },
-      { name: "LangChain & LCEL RAG", level: "Advanced", pct: 88 },
-      { name: "Pinecone Vector Database", level: "Advanced", pct: 86 },
-      { name: "Sarvam AI & LLaMA Integration", level: "Advanced", pct: 87 }
+      { name: "Python", level: "Advanced", desc: "FastAPI, Flask, PyTorch, LangChain, NumPy, Pandas" },
+      { name: "Java", level: "Advanced", desc: "Spring Boot, Object-Oriented Design, Maven, JPA" },
+      { name: "JavaScript (ES6+)", level: "Advanced", desc: "React, Node.js, Asynchronous Programming, DOM" },
+      { name: "TypeScript", level: "Proficient", desc: "Next.js, Static Typing, Interfaces, Web Systems" },
+      { name: "Dart", level: "Proficient", desc: "Flutter Mobile Development, State Management" },
+      { name: "PHP", level: "Advanced", desc: "PHP 8, MVC Architectures, REST APIs, Security" },
+      { name: "SQL", level: "Advanced", desc: "Complex Queries, Schema Design, Indexing, Joins" },
+      { name: "C++", level: "Proficient", desc: "Data Structures & Algorithmic Problem Solving" }
     ]
   },
   {
-    id: "fullstack",
-    title: "Full-Stack Web Engineering",
-    description: "Designing resilient backend architectures, relational databases, and modern interactive user interfaces.",
+    id: "frameworks",
+    title: "Frameworks & Web Technologies",
+    description: "Modern frameworks for scalable frontends, high-throughput APIs, and mobile clients.",
     skills: [
-      { name: "PHP 8 & MySQL", level: "Master", pct: 96 },
-      { name: "Python (Flask / FastAPI)", level: "Expert", pct: 94 },
-      { name: "JavaScript (ES6+) & DOM", level: "Expert", pct: 92 },
-      { name: "React 19 & Tailwind CSS", level: "Expert", pct: 91 },
-      { name: "HTML5 Canvas & Responsive UI", level: "Master", pct: 98 },
-      { name: "RESTful APIs & JSON Transport", level: "Expert", pct: 95 }
+      { name: "React 19 & Next.js", level: "Advanced", desc: "Component Architecture, Hooks, SSR/SSG" },
+      { name: "FastAPI & Flask", level: "Advanced", desc: "High-Performance Asynchronous Python Services" },
+      { name: "Spring Boot", level: "Proficient", desc: "Enterprise Microservices, Dependency Injection" },
+      { name: "Flutter", level: "Proficient", desc: "Cross-Platform iOS, Android & Web Applications" },
+      { name: "Tailwind CSS", level: "Expert", desc: "Responsive Design Systems, Clean Utility CSS" },
+      { name: "Vite & Tooling", level: "Advanced", desc: "Module Bundling, Optimization, Fast Builds" }
     ]
   },
   {
-    id: "platform-cloud",
-    title: "Platform & App Architecture",
-    description: "Building cross-platform client solutions, real-time synchronization, and robust server deployments.",
+    id: "ai-ml",
+    title: "AI, Machine Learning & Vector Search",
+    description: "Production intelligence pipelines, computer vision, and Retrieval-Augmented Generation.",
     skills: [
-      { name: "Flutter & Dart (Cross-Platform)", level: "Advanced", pct: 85 },
-      { name: "Firebase Realtime Database", level: "Advanced", pct: 88 },
-      { name: "Git & GitHub Version Control", level: "Master", pct: 95 },
-      { name: "Apache & XAMPP Server Hosting", level: "Expert", pct: 92 },
-      { name: "Vite & Modern Frontend Tooling", level: "Expert", pct: 90 },
-      { name: "SVG & Canvas Dynamic Customizers", level: "Advanced", pct: 89 }
+      { name: "LangChain (LCEL)", level: "Advanced", desc: "RAG Pipelines, Prompt Templates, Vector Chaining" },
+      { name: "Pinecone Vector DB", level: "Advanced", desc: "High-Dimensional Vector Search, Cosine Similarity" },
+      { name: "Google Gemini API", level: "Advanced", desc: "Gemini 2.0 Flash, Multimodal & Text Embeddings" },
+      { name: "face-api.js & TensorFlow.js", level: "Advanced", desc: "Browser-side CNNs, 128D Biometric Embeddings" },
+      { name: "PyTorch & TensorFlow", level: "Proficient", desc: "Neural Networks, Image Classification, Training" },
+      { name: "scikit-learn & Pandas", level: "Advanced", desc: "Data Preprocessing, Regression, Model Evaluation" }
     ]
   },
   {
-    id: "media-business",
-    title: "Media Production & Digital Business",
-    description: "Directing cinematic audiovisual editing, platform strategy, and user journey optimization at Tarun Media.",
+    id: "cloud-db",
+    title: "Databases, Cloud & DevOps",
+    description: "Database engines, containerization, and reliable server infrastructure.",
     skills: [
-      { name: "Adobe Premiere Pro Editing", level: "Expert", pct: 94 },
-      { name: "DaVinci Resolve Color Grading", level: "Advanced", pct: 88 },
-      { name: "Adobe Photoshop Visual Design", level: "Expert", pct: 92 },
-      { name: "Digital Business & Platform UX", level: "Expert", pct: 93 },
-      { name: "User Journey & Flow Mapping", level: "Expert", pct: 91 },
-      { name: "Technical Communication & Leadership", level: "Master", pct: 96 }
+      { name: "PostgreSQL & Supabase", level: "Advanced", desc: "Relational Modeling, Auth, Row-Level Security" },
+      { name: "MySQL", level: "Advanced", desc: "ACID Transactions, Stored Procedures, Optimization" },
+      { name: "Firebase Realtime DB", level: "Advanced", desc: "Live Synchronization, Rules, Cloud Firestore" },
+      { name: "MongoDB & Redis", level: "Proficient", desc: "NoSQL Collections, In-Memory Caching" },
+      { name: "Docker", level: "Proficient", desc: "Containerization, Multi-Stage Builds, Isolation" },
+      { name: "Git & GitHub", level: "Expert", desc: "Version Control, CI/CD Actions, Code Review" }
     ]
-  }
-];
-
-export const VISUAL_GALLERY = [
-  {
-    id: "gal-1",
-    title: "FaceMatch AI Event Architecture",
-    category: "Biometric AI & Computer Vision",
-    image: "/images/facematch_banner.jpg",
-    aspect: "col-span-1 md:col-span-2 aspect-video"
   },
   {
-    id: "gal-2",
-    title: "ORLIV RAG Knowledge Matrix",
-    category: "Vector Search & LLMs",
-    image: "/images/spatial_matrix_ui.jpg",
-    aspect: "col-span-1 aspect-square"
-  },
-  {
-    id: "gal-3",
-    title: "Tarun Media Production Suite",
-    category: "Cinematic Media & VFX",
-    image: "/images/cinematic_virtual_stage.jpg",
-    aspect: "col-span-1 md:col-span-2 aspect-video"
-  },
-  {
-    id: "gal-4",
-    title: "Smart Canteen Real-Time Ordering",
-    category: "Campus Web Platforms",
-    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1000&auto=format&fit=crop",
-    aspect: "col-span-1 aspect-square"
-  },
-  {
-    id: "gal-5",
-    title: "Interactive Vector Customization",
-    category: "Dynamic Canvas & SVG",
-    image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1000&auto=format&fit=crop",
-    aspect: "col-span-1 aspect-square"
-  },
-  {
-    id: "gal-6",
-    title: "Quantum Holographic Core",
-    category: "Interactive 3D WebGL",
-    image: "/images/cyber_quantum_core.jpg",
-    aspect: "col-span-1 aspect-square"
+    id: "core-cs",
+    title: "Core CS & Engineering Tools",
+    description: "Foundational computer science principles essential for Big Tech engineering roles.",
+    skills: [
+      { name: "Data Structures & Algorithms", level: "Advanced", desc: "Arrays, Trees, Graphs, Dynamic Programming" },
+      { name: "System Design & REST", level: "Advanced", desc: "Stateless Microservices, Load Balancing, Caching" },
+      { name: "Operating Systems & Linux", level: "Proficient", desc: "Processes, Threads, Sockets, Shell Scripting" },
+      { name: "Postman & API Testing", level: "Advanced", desc: "Endpoint Verification, Mocking, Automated Tests" }
+    ]
   }
 ];
 
 export const TIMELINE = [
   {
     year: "2023 - 2027",
-    role: "B.Tech in Computer Science and Engineering (CSE)",
-    company: "DRK Institute of Science and Technology (JNTUH), Hyderabad",
-    description: "Undergraduate degree in Computer Science and Engineering. Specializing in Artificial Intelligence, Machine Learning, Operating Systems, Database Management, and Full-Stack Engineering."
+    role: "B.Tech in Computer Science and Engineering",
+    company: "DRK Institute of Science and Technology (JNTU Hyderabad)",
+    description: "Pursuing bachelor's degree in Computer Science and Engineering. Rigorous coursework in Data Structures, Algorithms, Database Systems, Computer Networks, Operating Systems, Machine Learning, and Software Engineering."
   },
   {
     year: "2024 - PRESENT",
-    role: "Lead Full-Stack Developer & Media Director",
-    company: "Tarun Media",
-    description: "Directing digital platform development, AI system deployments, full-stack web applications, and professional multimedia production for clients and modern digital initiatives."
-  },
-  {
-    year: "2024 - 2026",
-    role: "Lead Systems Architect (Academic & Independent Systems)",
-    company: "Campus & Client Deployments",
-    description: "Engineered and deployed FaceMatch AI biometric facial recognition, AgriPath AI / ORLIV RAG assistant, Smart Canteen ordering, ENIGMA marketplace, and Zeng Apparel Studio."
+    role: "Open-Source Software Engineer & Systems Creator",
+    company: "GitHub Community (@eppetarun)",
+    description: "Designed, built, and open-sourced 33+ repositories spanning AI healthcare platforms (CareCircle AI), biometric computer vision (MyPic), agronomic RAG systems (AgriPath/Orliv), Flutter mobile apps, and enterprise Spring Boot microservices."
   },
   {
     year: "2020 - 2022",
     role: "Higher Secondary Education (MPC)",
     company: "J.S. Junior College, Hyderabad",
-    description: "Completed intermediate studies with focused concentration in Mathematics, Physics, and Chemistry."
+    description: "Completed intermediate education with major concentration in Mathematics, Physics, and Chemistry, laying a strong quantitative and analytical foundation."
   },
   {
     year: "2020",
     role: "Secondary School Certificate (SSC)",
     company: "SVBV School",
-    description: "Completed high school with academic distinction, building fundamental passion for computer programming and visual technologies."
+    description: "Completed secondary education with academic distinction and early exploration into computer programming."
   }
 ];
 
-export const TERMINAL_COMMANDS = {
-  help: `Available commands:
-  • about       : Display Eppe Tarun's profile & mission
-  • education   : Academic chronology & degrees (JNTUH CSE)
-  • skills      : List primary technical and creative proficiencies
-  • projects    : Show verified developed projects (FaceMatch, AgriPath, etc.)
-  • contact     : Get direct communication frequencies (Email, Phone, WhatsApp)
-  • hire        : Inquire regarding software engineering, AI, & freelance
-  • clear       : Clear the terminal screen
-  • matrix      : Initialize cybernetic visual stream`,
-  about: `EPPE TARUN [TARUN MEDIA]
-Status: Active • B.Tech CSE (2023-2027) @ JNTUH
-Profile: Computer Science Engineer, Full-Stack Architect & AI Systems Developer
-Location: Hyderabad, Telangana, India
-Focus: Face Biometrics (face-api.js), Vector RAG (Gemini & Pinecone), Full-Stack (PHP, Python, React)`,
-  education: `ACADEMIC CHRONOLOGY:
-  • 2023 - 2027 : B.Tech, Computer Science and Engineering
-                  DRK Institute of Science and Technology (JNTUH), Hyderabad
-  • 2020 - 2022 : Intermediate (MPC), J.S. Junior College, Hyderabad
-  • 2020        : Secondary School Certificate (SSC), SVBV School`,
-  skills: `CORE ARSENAL:
-  [AI & Vision]    face-api.js, TensorFlow.js, Google Gemini API, LangChain LCEL, Pinecone DB
-  [Full-Stack]     PHP 8, MySQL, Python (FastAPI/Flask), React 19, JavaScript ES6+, Tailwind CSS
-  [Platforms]      Flutter & Dart, Firebase Realtime DB, Git, Apache, XAMPP, SVG Customizers
-  [Media & UX]     Adobe Premiere Pro, DaVinci Resolve, Photoshop, Platform Strategy`,
-  projects: `VERIFIED DEVELOPED PROJECTS:
-  1. FACEMATCH AI        - 128D Biometric Face Recognition & Event Photo Retrieval
-  2. AGRIPATH AI / ORLIV - Urban Rooftop Agriculture RAG Vector Knowledge Engine
-  3. SMART CANTEEN       - Campus Digital Food Ordering & Kitchen Telemetry
-  4. ZENG APPAREL        - Interactive SVG T-Shirt Customizer & E-Commerce
-  5. ENIGMA TUITIONS     - Two-Sided Tutor Marketplace with Mobile App REST API
-  6. SMART UPSC ADVISOR  - AI Civil Services Mentoring & Answer Evaluator
-  7. ENTERPRISE JOBS     - Full-Scale Recruitment & Applicant Tracking System
-  8. TECHFAIR VOTING     - Campus Technical Innovation Exhibition & Live Voting`,
-  contact: `DIRECT FREQUENCIES:
-  Email    : eppetarun@gmail.com
-  Phone    : +91 9121919410
-  WhatsApp : wa.me/919121919410
-  GitHub   : github.com/eppetarun
-  LinkedIn : linkedin.com/in/eppetarun`,
-  hire: `COLLABORATING WITH EPPE TARUN:
-  • Roles: Full-Stack Web Engineer, AI Systems Integrator, Frontend Architect, Media Director
-  • Availability: Immediate for freelance web platforms, internships, and high-impact software roles
-  • Action: Reach out via email (eppetarun@gmail.com) or WhatsApp (+91 9121919410)!`
+export const GITHUB_STATS = {
+  username: "eppetarun",
+  repoCount: 33,
+  followers: 0,
+  topLanguages: ["Python", "JavaScript", "PHP", "Java", "Dart", "C++"],
+  profileUrl: "https://github.com/eppetarun",
+  avatarUrl: "https://avatars.githubusercontent.com/u/164149707?v=4"
 };
